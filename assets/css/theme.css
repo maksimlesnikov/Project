@@ -1,0 +1,1152 @@
+html {
+  --main-color: rgb(0, 102, 255);
+  --blocks1-color: rgb(94, 255, 0);
+}
+.label {
+  width: 200px;
+  height: 50px;
+  background-color: gray;
+  border: 2px;
+  display: flex;
+  border-radius: 25px;
+  transition: background-color 1s ease-in;
+}
+.circle {
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  border-radius: 50%;
+  transition: transform 1s ease-in, background-color 1s ease-in;
+}
+#check:checked ~ .label {
+  background-color: black;
+}
+#check:checked ~ .label .circle {
+  background-color: blue;
+  transform: translateX(150px);
+}
+#check {
+  display: none;
+}
+#check:checked ~ .main {
+  --main-color: rgb(0, 0, 0);
+}
+.main {
+  transition: background-color 1s ease-in;
+  height: 100%;
+  background-color: var(--main-color);
+}
+html,
+body {
+  height: 100%;
+}
+#check:checked ~ .main {
+  .blocks1 {
+    --blocks1-color: rgb(255, 0, 0);
+  }
+}
+.blocks1 {
+  transition: background-color 1s ease-in;
+  width: 200px;
+  height: 200px;
+  background-color: var(--blocks1-color);
+}
+.title::after {
+  content: "1230992⏏💀🌪\2230";
+}
+.title::before {
+  content: "\292A";
+  color: darkmagenta;
+  font-size: larger;
+}
+#burger:checked ~ .menu-burger {
+  .burger-line {
+    background-color: darkcyan;
+    &::after {
+      transform: rotate(90deg);
+      background-color: red;
+    }
+    &::before {
+      transform: rotate(-90deg);
+      background-color: red;
+    }
+  }
+}
+.menu-burger {
+  position: fixed;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  background-color: darkcyan;
+  display: flex;
+  align-items: center;
+  z-index: 10;
+}
+.burger-line {
+  transition: transform 1s ease-in, background-color 1s ease-in;
+  width: 100%;
+  height: 4px;
+  background-color: crimson;
+  display: block;
+  &::after {
+    transition: inherit;
+    content: "";
+    display: block;
+    width: 100%;
+    height: inherit;
+    background-color: inherit;
+    position: relative;
+    top: 8px;
+  }
+  &::before {
+    transition: inherit;
+    content: "";
+    display: block;
+    width: 100%;
+    height: inherit;
+    background-color: inherit;
+    position: relative;
+    top: -12px;
+  }
+}
+/* высота, ширина, цвет, внутренний отступ */
+.menu-box {
+  height: 1000px;
+  width: 250px;
+  background-color: darkgoldenrod;
+  padding: 20px;
+  position: fixed;
+  right: -100%;
+  z-index: 9;
+  transition: right 1s cubic-bezier(0, 1.225, 0.47, -0.6);
+}
+#burger:checked ~ .menu-box {
+  right: 0;
+}
+ul {
+  list-style: outside;
+  li {
+    border-left: 1px solid black;
+  }
+  list-style: url(../images/twitter.svg);
+}
+ol {
+}
+/* From Uiverse.io by mobinkakei */
+.btn {
+  width: 140px;
+  height: 50px;
+  background: linear-gradient(to top, #ff7403, #ffd900, #eeff00);
+  color: #fff;
+  border-radius: 50px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+
+.btn span {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: top 0.5s;
+}
+
+.btn-text-one {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.btn-text-two {
+  position: absolute;
+  width: 100%;
+  top: 150%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.btn:hover .btn-text-one {
+  top: -100%;
+}
+
+.btn:hover .btn-text-two {
+  top: 50%;
+}
+.container {
+  background-color: #ffffff;
+  display: flex;
+  width: 460px;
+  height: 120px;
+  position: relative;
+  border-radius: 6px;
+  transition: 0.3s ease-in-out;
+}
+
+.container:hover {
+  transform: scale(1.03);
+  width: 220px;
+}
+
+.container:hover .left-side {
+  width: 100%;
+}
+
+.left-side {
+  background-color: #5de2a3;
+  width: 130px;
+  height: 120px;
+  border-radius: 4px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.3s;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.right-side {
+  width: calc(100% - 130px);
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  cursor: pointer;
+  justify-content: space-between;
+  white-space: nowrap;
+  transition: 0.3s;
+}
+
+.right-side:hover {
+  background-color: #f9f7f9;
+}
+
+.arrow {
+  width: 20px;
+  height: 20px;
+  margin-right: 20px;
+}
+
+.new {
+  font-size: 23px;
+  font-family: "Lexend Deca", sans-serif;
+  margin-left: 20px;
+}
+
+.card {
+  width: 70px;
+  height: 46px;
+  background-color: #c7ffbc;
+  border-radius: 6px;
+  position: absolute;
+  display: flex;
+  z-index: 10;
+  flex-direction: column;
+  align-items: center;
+  -webkit-box-shadow: 9px 9px 9px -2px rgba(77, 200, 143, 0.72);
+  -moz-box-shadow: 9px 9px 9px -2px rgba(77, 200, 143, 0.72);
+  -webkit-box-shadow: 9px 9px 9px -2px rgba(77, 200, 143, 0.72);
+}
+
+.card-line {
+  width: 65px;
+  height: 13px;
+  background-color: #80ea69;
+  border-radius: 2px;
+  margin-top: 7px;
+}
+
+@media only screen and (max-width: 480px) {
+  .container {
+    transform: scale(0.7);
+  }
+
+  .container:hover {
+    transform: scale(0.74);
+  }
+
+  .new {
+    font-size: 18px;
+  }
+}
+
+.buttons {
+  width: 8px;
+  height: 8px;
+  background-color: #379e1f;
+  box-shadow: 0 -10px 0 0 #26850e, 0 10px 0 0 #56be3e;
+  border-radius: 50%;
+  margin-top: 5px;
+  transform: rotate(90deg);
+  margin: 10px 0 0 -30px;
+}
+
+.container:hover .card {
+  animation: slide-top 1.2s cubic-bezier(0.645, 0.045, 0.355, 1) both;
+}
+
+.container:hover .post {
+  animation: slide-post 1s cubic-bezier(0.165, 0.84, 0.44, 1) both;
+}
+
+@keyframes slide-top {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  50% {
+    -webkit-transform: translateY(-70px) rotate(90deg);
+    transform: translateY(-70px) rotate(90deg);
+  }
+
+  60% {
+    -webkit-transform: translateY(-70px) rotate(90deg);
+    transform: translateY(-70px) rotate(90deg);
+  }
+
+  100% {
+    -webkit-transform: translateY(-8px) rotate(90deg);
+    transform: translateY(-8px) rotate(90deg);
+  }
+}
+
+.post {
+  width: 63px;
+  height: 75px;
+  background-color: #2a2a8d;
+  position: absolute;
+  z-index: 11;
+  bottom: 10px;
+  top: 120px;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.post-line {
+  width: 47px;
+  height: 9px;
+  background-color: #545354;
+  position: absolute;
+  border-radius: 0px 0px 3px 3px;
+  right: 8px;
+  top: 8px;
+}
+
+.post-line:before {
+  content: "";
+  position: absolute;
+  width: 47px;
+  height: 9px;
+  background-color: #757375;
+  top: -8px;
+}
+
+.screen {
+  width: 47px;
+  height: 23px;
+  background-color: #ffffff;
+  position: absolute;
+  top: 22px;
+  right: 8px;
+  border-radius: 3px;
+}
+
+.numbers {
+  width: 12px;
+  height: 12px;
+  background-color: #838183;
+  box-shadow: 0 -18px 0 0 #838183, 0 18px 0 0 #838183;
+  border-radius: 2px;
+  position: absolute;
+  transform: rotate(90deg);
+  left: 25px;
+  top: 52px;
+}
+
+.numbers-line2 {
+  width: 12px;
+  height: 12px;
+  background-color: #aaa9ab;
+  box-shadow: 0 -18px 0 0 #aaa9ab, 0 18px 0 0 #aaa9ab;
+  border-radius: 2px;
+  position: absolute;
+  transform: rotate(90deg);
+  left: 25px;
+  top: 68px;
+}
+
+@keyframes slide-post {
+  50% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  100% {
+    -webkit-transform: translateY(-70px);
+    transform: translateY(-70px);
+  }
+}
+
+.dollar {
+  position: absolute;
+  font-size: 16px;
+  font-family: "Lexend Deca", sans-serif;
+  width: 100%;
+  left: 0;
+  top: 0;
+  color: #4b953b;
+  text-align: center;
+}
+
+.container:hover .dollar {
+  animation: fade-in-fwd 0.3s 1s backwards;
+}
+
+@keyframes fade-in-fwd {
+  0% {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* From Uiverse.io by andrew-demchenk0 */
+.cube-loader {
+  position: relative;
+  /* u can choose any size */
+  width: 75px;
+  height: 75px;
+  transform-style: preserve-3d;
+  transform: rotateX(-30deg);
+  animation: animate 4s linear infinite;
+}
+
+@keyframes animate {
+  0% {
+    transform: rotateX(-30deg) rotateY(0);
+  }
+
+  100% {
+    transform: rotateX(-30deg) rotateY(360deg);
+  }
+}
+
+.cube-loader .cube-wrapper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  /* top: 0;
+  left: 0; */
+  transform-style: preserve-3d;
+}
+
+.cube-loader .cube-wrapper .cube-span {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  /* top: 0;
+  left: 0; */
+  /* width 75px / 2 = 37.5px */
+  transform: rotateY(calc(90deg * var(--i))) translateZ(37.5px);
+  background: linear-gradient(
+    to bottom,
+    hsl(330, 3.13%, 25.1%) 0%,
+    hsl(177.27, 21.71%, 32.06%) 5.5%,
+    hsl(176.67, 34.1%, 36.88%) 12.1%,
+    hsl(176.61, 42.28%, 40.7%) 19.6%,
+    hsl(176.63, 48.32%, 43.88%) 27.9%,
+    hsl(176.66, 53.07%, 46.58%) 36.6%,
+    hsl(176.7, 56.94%, 48.91%) 45.6%,
+    hsl(176.74, 62.39%, 50.91%) 54.6%,
+    hsl(176.77, 69.86%, 52.62%) 63.4%,
+    hsl(176.8, 76.78%, 54.08%) 71.7%,
+    hsl(176.83, 83.02%, 55.29%) 79.4%,
+    hsl(176.85, 88.44%, 56.28%) 86.2%,
+    hsl(176.86, 92.9%, 57.04%) 91.9%,
+    hsl(176.88, 96.24%, 57.59%) 96.3%,
+    hsl(176.88, 98.34%, 57.93%) 99%,
+    hsl(176.89, 99.07%, 58.04%) 100%
+  );
+}
+
+.cube-top {
+  position: absolute;
+  width: 75px;
+  height: 75px;
+  background: hsl(330, 3.13%, 25.1%) 0%;
+  /* width 75px / 2 = 37.5px */
+  transform: rotateX(90deg) translateZ(37.5px);
+  transform-style: preserve-3d;
+}
+
+.cube-top::before {
+  content: "";
+  position: absolute;
+  /* u can choose any size */
+  width: 75px;
+  height: 75px;
+  background: hsl(176.61, 42.28%, 40.7%) 19.6%;
+  transform: translateZ(-90px);
+  filter: blur(10px);
+  box-shadow: 0 0 10px #323232, 0 0 20px hsl(176.61, 42.28%, 40.7%) 19.6%,
+    0 0 30px #323232, 0 0 40px hsl(176.61, 42.28%, 40.7%) 19.6%;
+}
+/* From Uiverse.io by Praashoo7 */
+/* Hide the default checkbox */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.container {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  font-size: 20px;
+  user-select: none;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 2.3em;
+  width: 2.3em;
+  background-color: #ccc;
+  border-radius: 50%;
+  transition: 0.4s;
+}
+
+.checkmark:hover {
+  box-shadow: inset 17px 17px 16px #b3b3b3, inset -17px -17px 16px #ffffff;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  box-shadow: none;
+  background-color: limegreen;
+  transform: rotateX(360deg);
+}
+
+.container input:checked ~ .checkmark:hover {
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  left: 0.96em;
+  top: 0.7em;
+  width: 0.25em;
+  height: 0.5em;
+  border: solid white;
+  border-width: 0 0.15em 0.15em 0;
+  box-shadow: 0.1em 0.1em 0em 0 rgba(0, 0, 0, 0.3);
+  transform: rotate(45deg);
+}
+/* From Uiverse.io by Lakshay-art */
+.grid {
+  height: 800px;
+  width: 800px;
+  background-image: linear-gradient(to right, #0f0f10 1px, transparent 1px),
+    linear-gradient(to bottom, #0f0f10 1px, transparent 1px);
+  background-size: 1rem 1rem;
+  background-position: center center;
+  position: absolute;
+  z-index: -1;
+  filter: blur(1px);
+}
+.white,
+.border,
+.darkBorderBg,
+.glow {
+  max-height: 70px;
+  max-width: 314px;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  overflow: hidden;
+  z-index: -1;
+  /* Border Radius */
+  border-radius: 12px;
+  filter: blur(3px);
+}
+.input {
+  background-color: #010201;
+  border: none;
+  /* padding:7px; */
+  width: 301px;
+  height: 56px;
+  border-radius: 10px;
+  color: white;
+  padding-inline: 59px;
+  font-size: 18px;
+}
+#poda {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.input::placeholder {
+  color: #c0b9c0;
+}
+
+.input:focus {
+  outline: none;
+}
+
+#main:focus-within > #input-mask {
+  display: none;
+}
+
+#input-mask {
+  pointer-events: none;
+  width: 100px;
+  height: 20px;
+  position: absolute;
+  background: linear-gradient(90deg, transparent, black);
+  top: 18px;
+  left: 70px;
+}
+#pink-mask {
+  pointer-events: none;
+  width: 30px;
+  height: 20px;
+  position: absolute;
+  background: #cf30aa;
+  top: 10px;
+  left: 5px;
+  filter: blur(20px);
+  opacity: 0.8;
+  animation: leftright 4s ease-in infinite;
+  transition: all 2s;
+}
+#main:hover > #pink-mask {
+  animation: rotate 4s linear infinite;
+  opacity: 0;
+}
+
+.white {
+  max-height: 63px;
+  max-width: 307px;
+  border-radius: 10px;
+  filter: blur(2px);
+}
+
+.white::before {
+  content: "";
+  z-index: -2;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(83deg);
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  filter: brightness(1.4);
+  background-image: conic-gradient(
+    rgba(0, 0, 0, 0) 0%,
+    #a099d8,
+    rgba(0, 0, 0, 0) 8%,
+    rgba(0, 0, 0, 0) 50%,
+    #dfa2da,
+    rgba(0, 0, 0, 0) 58%
+  );
+  animation: rotate 4s linear infinite;
+  transition: all 2s;
+}
+.border {
+  max-height: 59px;
+  max-width: 303px;
+  border-radius: 11px;
+  filter: blur(0.5px);
+}
+.border::before {
+  content: "";
+  z-index: -2;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(70deg);
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  filter: brightness(1.3);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-image: conic-gradient(
+    #1c191c,
+    #402fb5 5%,
+    #1c191c 14%,
+    #1c191c 50%,
+    #cf30aa 60%,
+    #1c191c 64%
+  );
+  animation: rotate 4s 0.1s linear infinite;
+  transition: all 2s;
+}
+.darkBorderBg {
+  max-height: 65px;
+  max-width: 312px;
+}
+.darkBorderBg::before {
+  content: "";
+  z-index: -2;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(82deg);
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-image: conic-gradient(
+    rgba(0, 0, 0, 0),
+    #18116a,
+    rgba(0, 0, 0, 0) 10%,
+    rgba(0, 0, 0, 0) 50%,
+    #6e1b60,
+    rgba(0, 0, 0, 0) 60%
+  );
+  transition: all 2s;
+}
+#poda:hover > .darkBorderBg::before {
+  transform: translate(-50%, -50%) rotate(262deg);
+}
+#poda:hover > .glow::before {
+  transform: translate(-50%, -50%) rotate(240deg);
+}
+#poda:hover > .white::before {
+  transform: translate(-50%, -50%) rotate(263deg);
+}
+#poda:hover > .border::before {
+  transform: translate(-50%, -50%) rotate(250deg);
+}
+
+#poda:hover > .darkBorderBg::before {
+  transform: translate(-50%, -50%) rotate(-98deg);
+}
+#poda:hover > .glow::before {
+  transform: translate(-50%, -50%) rotate(-120deg);
+}
+#poda:hover > .white::before {
+  transform: translate(-50%, -50%) rotate(-97deg);
+}
+#poda:hover > .border::before {
+  transform: translate(-50%, -50%) rotate(-110deg);
+}
+
+#poda:focus-within > .darkBorderBg::before {
+  transform: translate(-50%, -50%) rotate(442deg);
+  transition: all 4s;
+}
+#poda:focus-within > .glow::before {
+  transform: translate(-50%, -50%) rotate(420deg);
+  transition: all 4s;
+}
+#poda:focus-within > .white::before {
+  transform: translate(-50%, -50%) rotate(443deg);
+  transition: all 4s;
+}
+#poda:focus-within > .border::before {
+  transform: translate(-50%, -50%) rotate(430deg);
+  transition: all 4s;
+}
+
+.glow {
+  overflow: hidden;
+  filter: blur(30px);
+  opacity: 0.4;
+  max-height: 130px;
+  max-width: 354px;
+}
+.glow:before {
+  content: "";
+  z-index: -2;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(60deg);
+  position: absolute;
+  width: 999px;
+  height: 999px;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  /*border color, change middle color*/
+  background-image: conic-gradient(
+    #000,
+    #402fb5 5%,
+    #000 38%,
+    #000 50%,
+    #cf30aa 60%,
+    #000 87%
+  );
+  /* change speed here */
+  animation: rotate 4s 0.3s linear infinite;
+  transition: all 2s;
+}
+
+@keyframes rotate {
+  100% {
+    transform: translate(-50%, -50%) rotate(450deg);
+  }
+}
+@keyframes leftright {
+  0% {
+    transform: translate(0px, 0px);
+    opacity: 1;
+  }
+
+  49% {
+    transform: translate(250px, 0px);
+    opacity: 0;
+  }
+  80% {
+    transform: translate(-40px, 0px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translate(0px, 0px);
+    opacity: 1;
+  }
+}
+
+#filter-icon {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  max-height: 40px;
+  max-width: 38px;
+  height: 100%;
+  width: 100%;
+
+  isolation: isolate;
+  overflow: hidden;
+  /* Border Radius */
+  border-radius: 10px;
+  background: linear-gradient(180deg, #161329, black, #1d1b4b);
+  border: 1px solid transparent;
+}
+.filterBorder {
+  height: 42px;
+  width: 40px;
+  position: absolute;
+  overflow: hidden;
+  top: 7px;
+  right: 7px;
+  border-radius: 10px;
+}
+
+.filterBorder::before {
+  content: "";
+
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(90deg);
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  filter: brightness(1.35);
+  background-image: conic-gradient(
+    rgba(0, 0, 0, 0),
+    #3d3a4f,
+    rgba(0, 0, 0, 0) 50%,
+    rgba(0, 0, 0, 0) 50%,
+    #3d3a4f,
+    rgba(0, 0, 0, 0) 100%
+  );
+  animation: rotate 4s linear infinite;
+}
+#main {
+  position: relative;
+}
+#search-icon {
+  position: absolute;
+  left: 20px;
+  top: 15px;
+}
+
+.radio {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.radio > input {
+  position: absolute;
+  appearance: none;
+}
+
+.radio > label {
+  cursor: pointer;
+  font-size: 30px;
+  position: relative;
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.radio > label > svg {
+  fill: #666;
+  transition: fill 0.3s ease;
+}
+
+.radio > label::before,
+.radio > label::after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background-color: #ff9e0b;
+  border-radius: 50%;
+  opacity: 0;
+  transform: scale(0);
+  transition: transform 0.4s ease, opacity 0.4s ease;
+  animation: particle-explosion 1s ease-out;
+}
+
+.radio > label::before {
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%) scale(0);
+}
+
+.radio > label::after {
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%) scale(0);
+}
+
+.radio > label:hover::before,
+.radio > label:hover::after {
+  opacity: 1;
+  transform: translateX(-50%) scale(1.5);
+}
+
+.radio > label:hover {
+  transform: scale(1.2);
+  animation: pulse 0.6s infinite alternate;
+}
+
+/* Star glow and animation on hover */
+.radio > label:hover > svg {
+  fill: #ff9e0b;
+  filter: drop-shadow(0 0 15px rgba(255, 158, 11, 0.9));
+  animation: shimmer 1s ease infinite alternate;
+}
+
+.radio > input:checked + label > svg {
+  fill: #ff9e0b;
+  filter: drop-shadow(0 0 15px rgba(255, 158, 11, 0.9));
+  animation: pulse 0.8s infinite alternate;
+}
+
+.radio > input:checked + label ~ label > svg,
+.radio > input:checked + label > svg {
+  fill: #ff9e0b; /* Highlight the stars */
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+@keyframes particle-explosion {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    filter: drop-shadow(0 0 10px rgba(255, 158, 11, 0.5));
+  }
+  100% {
+    filter: drop-shadow(0 0 20px rgba(255, 158, 11, 1));
+  }
+}
+
+.radio > input:checked + label:hover,
+.radio > input:checked + label:hover ~ label {
+  fill: #e58e09;
+}
+
+.radio > label:hover,
+.radio > label:hover ~ label {
+  fill: #ff9e0b;
+}
+
+.radio input:checked ~ label svg {
+  fill: #ffa723;
+}
+/* From Uiverse.io by Yaya12085 */
+.form-container {
+  width: 320px;
+  border-radius: 0.75rem;
+  background-color: rgba(17, 24, 39, 1);
+  padding: 2rem;
+  color: rgba(243, 244, 246, 1);
+}
+
+.title {
+  text-align: center;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+}
+
+.form {
+  margin-top: 1.5rem;
+}
+
+.input-group {
+  margin-top: 0.25rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.input-group label {
+  display: block;
+  color: rgba(156, 163, 175, 1);
+  margin-bottom: 4px;
+}
+
+.input-group input {
+  width: 100%;
+  border-radius: 0.375rem;
+  border: 1px solid rgba(55, 65, 81, 1);
+  outline: 0;
+  background-color: rgba(17, 24, 39, 1);
+  padding: 0.75rem 1rem;
+  color: rgba(243, 244, 246, 1);
+}
+
+.input-group input:focus {
+  border-color: rgba(167, 139, 250);
+}
+
+.forgot {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  color: rgba(156, 163, 175, 1);
+  margin: 8px 0 14px 0;
+}
+
+.forgot a,
+.signup a {
+  color: rgba(243, 244, 246, 1);
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.forgot a:hover,
+.signup a:hover {
+  text-decoration: underline rgba(167, 139, 250, 1);
+}
+
+.sign {
+  display: block;
+  width: 100%;
+  background-color: rgba(167, 139, 250, 1);
+  padding: 0.75rem;
+  text-align: center;
+  color: rgba(17, 24, 39, 1);
+  border: none;
+  border-radius: 0.375rem;
+  font-weight: 600;
+}
+
+.social-message {
+  display: flex;
+  align-items: center;
+  padding-top: 1rem;
+}
+
+.line {
+  height: 1px;
+  flex: 1 1 0%;
+  background-color: rgba(55, 65, 81, 1);
+}
+
+.social-message .message {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  color: rgba(156, 163, 175, 1);
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+}
+
+.social-icons .icon {
+  border-radius: 0.125rem;
+  padding: 0.75rem;
+  border: none;
+  background-color: transparent;
+  margin-left: 8px;
+}
+
+.social-icons .icon svg {
+  height: 1.25rem;
+  width: 1.25rem;
+  fill: #fff;
+}
+
+.signup {
+  text-align: center;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  color: rgba(156, 163, 175, 1);
+}

@@ -1,0 +1,48 @@
+@font-face {
+  font-family: "archangelsk-font";
+  src: url("../fonts/ofont.ru_Archangelsk.woff2") format("woff2"),
+    url("../fonts/Archangelsk.ttf") format("ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "bebasneue";
+  src: url("../fonts/BebasNeue-Regular.ttf") format("ttf");
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.block {
+  display: flex;
+  background-color: black;
+  height: 600px;
+  align-items: self-start;
+  justify-content: space-between;
+}
+
+h1 {
+  font-size: 62px;
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+p {
+  font-family: "bebasneue", sans-serif;
+  font-size: 18px;
+  margin-bottom: 25px;
+  line-height: 34px;
+  max-width: 952px;
+  span {
+    color: #52bedc;
+    font-weight: 600;
+  }
+}
